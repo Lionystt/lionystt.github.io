@@ -29,9 +29,9 @@ body{
   position: static;
   z-index: 1;
 }
-nav{
+/*nav{
   display: none;
-}
+}*/
 header{
   display: flex;
   width: 100%;
@@ -114,7 +114,7 @@ ul{
   flex-flow: column wrap;
   list-style: none;
 }
-.nav{
+/*.nav{
   grid-area: nav;
   display: flex;
   position: fixed;
@@ -128,4 +128,4 @@ ul{
   width: 60%;
   height: 100%;
   transition: 1s;
-}
+}*/
