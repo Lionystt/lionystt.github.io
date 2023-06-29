@@ -1,3 +1,4 @@
+/*HAR HAR MAHADEV*/
 html{
   height: 100%;
   width: 100%;
@@ -27,19 +28,21 @@ body{
   display: flex;
   flex-flow: row wrap;
   position: static;
+  /* background-color: black; */
   z-index: 1;
 }
-/*nav{
+nav{
   display: none;
-}*/
+}
 header{
   display: flex;
   width: 100%;
   justify-content: center;
   grid-area: header;
-  font-size: 25px;
-  border-radius: 45px;
-  border: 9px solid cyan;
+  font-size: 45px;
+  /* border-bottom-right-radius: 45px; */
+  /* border-bottom-left-radius: 45px; */
+  border: 9px solid blue;
   background-color: #1c003d;
   color: cyan;
   cursor: pointer;
@@ -48,15 +51,17 @@ main{
   grid-area: main;
   background-color: orangered;
   font-size: 45px;
-  border-radius: 45px;
-  border: 9px solid cyan;
+  color: cyan;
+  /* border-radius: 45px; */
+  border: 9px solid blue;
 }
 footer{
   grid-area: footer;
-  background-color: blue;
+  background-color: cyan;
   width: 100%;
-  border-radius: 45px;
-  border: 9px solid cyan;
+  padding: 2%;
+  /* border-radius: 45px; */
+  border: 9px solid blue;
 }
 /*#cross{
   display: flex;
@@ -129,3 +134,4 @@ ul{
   height: 100%;
   transition: 1s;
 }*/
+
