@@ -39,9 +39,9 @@ header{
   grid-area: header;
   font-size: 25px;
   border-radius: 45px;
-  border: 9px solid indigo;
+  border: 9px solid cyan;
   background-color: #1c003d;
-  color: lightgreen;
+  color: cyan;
   cursor: pointer;
 }
 main{
@@ -49,14 +49,14 @@ main{
   background-color: orangered;
   font-size: 45px;
   border-radius: 45px;
-  border: 9px solid yellow;
+  border: 9px solid cyan;
 }
 footer{
   grid-area: footer;
-  background-color: yellow;
+  background-color: blue;
   width: 100%;
   border-radius: 45px;
-  border: 9px solid yellow;
+  border: 9px solid cyan;
 }
 /*#cross{
   display: flex;
@@ -73,40 +73,40 @@ footer{
   justify-content: center;
   align-items: center;
   height: 15%;
-  background-color: lightcyan;
+  background-color: blue;
   font-size: 45px;
   border-radius: 45px;
-  border: 9px solid yellow;
+  border: 9px solid cyan;
 }
 #css{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 15%;
-  background-color: lightcyan;
+  background-color: blue;
   font-size: 45px;
   border-radius: 45px;
-  border: 9px solid yellow;
+  border: 9px solid cyan;
 }
 #js{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 15%;
-  background-color: lightcyan;
+  background-color: blue;
   font-size: 45px;
   border-radius: 45px;
-  border: 9px solid yellow;
+  border: 9px solid cyan;
 }
 #python{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 15%;
-  background-color: lightcyan;
+  background-color: blue;
   font-size: 45px;
   border-radius: 45px;
-  border: 9px solid yellow;
+  border: 9px solid cyan;
 }
 ul{
   display: flex;
