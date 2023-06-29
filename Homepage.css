@@ -1,0 +1,131 @@
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  flex-flow: row wrap;
+ /* grid-template-rows: repeat(13, auto);
+  grid-template-columns: repeat(5, auto);*/
+  /*background-color: darkblue;
+/*  grid-template-areas: 
+  "header header header header header"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav main main main"
+  "nav nav footer footer footer";*/
+}
+#all{
+  display: flex;
+  flex-flow: row wrap;
+  position: static;
+  z-index: 1;
+}
+nav{
+  display: none;
+}
+header{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  grid-area: header;
+  font-size: 25px;
+  border-radius: 45px;
+  border: 9px solid indigo;
+  background-color: #1c003d;
+  color: lightgreen;
+  cursor: pointer;
+}
+main{
+  grid-area: main;
+  background-color: orangered;
+  font-size: 45px;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}
+footer{
+  grid-area: footer;
+  background-color: yellow;
+  width: 100%;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}
+/*#cross{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  text-decoration: none;
+  right: 80%;
+  top: 0%;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}*/
+#html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  background-color: lightcyan;
+  font-size: 45px;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}
+#css{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  background-color: lightcyan;
+  font-size: 45px;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}
+#js{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  background-color: lightcyan;
+  font-size: 45px;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}
+#python{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  background-color: lightcyan;
+  font-size: 45px;
+  border-radius: 45px;
+  border: 9px solid yellow;
+}
+ul{
+  display: flex;
+  gap: 60px;
+  flex-flow: column wrap;
+  list-style: none;
+}
+.nav{
+  grid-area: nav;
+  display: flex;
+  position: fixed;
+  font-size: 45px;
+  gap: 600px;
+  z-index: 3;
+  flex-flow: column wrap;
+  border-radius: 45px;
+  border: 9px solid yellow;
+  background-color: cyan;
+  width: 60%;
+  height: 100%;
+  transition: 1s;
+}
