@@ -4,6 +4,7 @@ html{
   width: 100%;
 }
 body{
+  height: 100%;
   display: flex;
   flex-flow: row wrap;
  /* grid-template-rows: repeat(13, auto);
@@ -25,6 +26,7 @@ body{
   "nav nav footer footer footer";*/
 }
 #all{
+  height:100%;
   display: flex;
   flex-flow: row wrap;
   position: static;
@@ -73,31 +75,37 @@ footer{
   border-radius: 45px;
   border: 9px solid yellow;
 }*/
-#html{
+#webdev{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
+  cursor: pointer;
+  /* height: 35%; */
+  flex-flow: column wrap;
   background-color: blue;
   font-size: 45px;
   border-radius: 45px;
   border: 9px solid cyan;
 }
-#css{
+#java{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
+  flex-flow: column wrap;
+  cursor: pointer;
+  /* height: 35%; */
   background-color: blue;
   font-size: 45px;
   border-radius: 45px;
   border: 9px solid cyan;
 }
-#js{
+#cpp{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
+  flex-flow: column wrap;
+  cursor: pointer;
+  /* height: 35%; */
   background-color: blue;
   font-size: 45px;
   border-radius: 45px;
@@ -107,7 +115,9 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
+  flex-flow: column wrap;
+  cursor: pointer;
+  /* height: 35%; */
   background-color: blue;
   font-size: 45px;
   border-radius: 45px;
@@ -134,4 +144,16 @@ ul{
   height: 100%;
   transition: 1s;
 }*/
-
+.tutlinks{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-decoration: none;
+  transition: none;
+  color: cyan;
+}
+.tutlinks:visited{
+  text-decoration: none;
+  color:cyan;
+}
