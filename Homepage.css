@@ -159,3 +159,12 @@ ul{
   text-decoration: none;
   color:cyan;
 }
+#java{
+display: none;
+}
+#cpp{
+  display: none;
+}
+#python{
+display: none;
+}
