@@ -41,11 +41,13 @@ header{
   width: 100%;
   justify-content: center;
   grid-area: header;
-  font-size: 45px;
+  position: sticky;
+  background-image: url("https://media.istockphoto.com/id/1035676256/photo/background-of-galaxy-and-stars.jpg?s=612x612&w=0&k=20&c=dh7eWJ6ovqnQZ9QwQQlq2wxqmAR7mgRlQTgaIylgBwc=");
+/*  font-size: 45px;*/
   /* border-bottom-right-radius: 45px; */
   /* border-bottom-left-radius: 45px; */
   border: 9px solid blue;
-  background-color: #1c003d;
+  /*background-color: #1c003d;*/
   color: cyan;
   cursor: pointer;
 }
