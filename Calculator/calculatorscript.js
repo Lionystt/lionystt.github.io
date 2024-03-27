@@ -1,9 +1,11 @@
 //Om Namah Shivaay
+try{
 class Calculator{
   constructor(){
     this.calBody = document.getElementById("calculatorBody");
     this.calScreen1 = document.getElementById("calculatorScreen1");
     this.calScreen1.contentEditable = true;
+    this.calScreen1.readOnly = true;
     this.calScreen2 = document.getElementById("calculatorScreen2");
     this.calButtons = document.getElementById("calculatorButtons");
     this.buttonArray = ["AC", "(",")", "÷","7","8","9","×", "4","5","6","-","1","2","3", "+","0",".","CLEAR", "=", "log", "sin", "cos", "tan", "y<sup>x</sup> or ^", "sinh", "cosh", "tanh", "π", "e",];
@@ -25,6 +27,7 @@ class Calculator{
       case "AC":
         j.addEventListener("click",()=>{
           this.calScreen1.innerHTML = "";
+          this.calScreen2.innerHTML = "";
         });
         break;
       case "CLEAR":
@@ -45,11 +48,18 @@ class Calculator{
         })
         break;
       case "yx" :
+j.addEventListener("click", ()=>{
+          this.calScreen1.innerHTML += "^";
+        })
         j.addEventListener("click", ()=>{
           this.calScreen1.innerHTML += "^";
         })
         break;
-      
+      case "cosh":
+j.addEventListener("click", ()=>{
+          this.calScreen1.innerHTML += "cosh";
+        })
+      break;
       default:
         j.addEventListener("click", ()=>{
           this.calScreen1.innerHTML += j.innerText;
@@ -74,7 +84,8 @@ class Calculator{
     }
   }
   MainWork(){
-    let a = this.calScreen1.innerHTML;
+    try {
+    let screen1text = this.calScreen1.innerHTML;
     let obj = {
     /*  "sin": "Math.sin",
       "cos": "Math.cos",
@@ -87,40 +98,54 @@ class Calculator{
       "log": Math.log,
       "e": "Math.E",
       "×": "*",
-      "÷": "/"*/
+      "÷": "/"
+      */
       
     }
     let obj2 = {
       "^": "**",
       "÷": "/",
       "×": "*",
-      "sin": "Math.sin",
-      "cos": "Math.cos",
-      "tan": "Math.tan",
-      "sinh": "Math.sinh",
-      "cosh": "Math.cosh",
-      "tanh": "Math.tanh",
+      "sin(": "Math.sin(",
+      "cos(": "Math.cos(",
+      "tan(": "Math.tan(",
+      "sinh(": "Math.sinh(",
+      "cosh(": "Math.cosh(",
+      "tanh(": "Math.tanh(",
       "π": "Math.PI",
-      "log": "Math.log",
+      "log(": "Math.log(",
       "e": "Math.E",
     
     }
-    for(let  [key, value] of Object.entries(obj)){
- a =   a.replace(key, value);
-     // alert(r, obj[r]);
+    for(let r in obj){
+ screen1text =   screen1text.replaceAll(r, obj[r]);
+     // alert(a);
+      
     }
-    //alert(eval(a));
-   this.calScreen1.innerHTML = a; 
-    for(let [key2, value2] of Object.entries(obj2)){
-      a = a.replace(key2, value2);
+  //  alert(eval(a));
+   this.calScreen1.innerHTML = screen1text; 
+    for(let s in obj2){
+      screen1text = screen1text.replaceAll(s, obj2[s]);
+      
     }
-    this.calScreen2.innerHTML = eval(a);
+      //alert(a);
+     // alert(eval(a));
+      let toDisplayText = eval(screen1text);
+   // alert(screen1text);
+    //alert(toDisplayText);
+    this.calScreen1.innerHTML = toDisplayText;
+      //this.calScreen1.innerHTML = b;
+    } catch (err){
+    //  alert(err);
+      this.calScreen2.innerHTML = err;
+    }
    // alert(eval(a));
   }
   MainWork2(){
     document.body.onclick = ()=>{
     //  alert("done!")
-    //  Test();
+      alert(window.getComputedStyle(this.calScreen1).getPropertyValue("cursor"));
+    //Test();
       if(this.calScreen1.innerHTML === ""){
         this.calScreen1.innerHTML = "";
         this.calScreen2.innerHTML = "";
@@ -138,22 +163,27 @@ function Test(){
    // document.body.innerHTML = [key, value];
   alert();
   alert("done")
-  let a = "";
-  alert();
+  try{
+  let z = "";
+//  alert();
   for(let i in Math){
-    a += `${i} === ${Math.i}<br>`;
+    z += `${i} === ${Math[i]}\n`;
    // alert(i, Math.i);
   
   }
+    alert(z)
+  } catch(err){
+    alert(err)
+  }
   console.dir(Math); 
-  document.body.innerHTML = a;
+  document.body.innerHTML = z;
+    
 }
-try {
-let cal = new Calculator();
-cal.MainWork2();
-//alert(Math.PI)
 
+let cal = new Calculator();
+//cal.MainWork2()
 } catch (error) {
   alert(error);
 }
 
+                        
