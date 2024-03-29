@@ -145,7 +145,7 @@ j.addEventListener("click", ()=>{
      alert(i);
     // alert(Match(tex, Text, i-1)) 
       result2 = true;
-     c+= this.Match(tex, Text, Text.length-1)[0];
+     c+= this.Match(tex, Text, i-1)[0];
     
     if(c!=""){
    //alert(c);
