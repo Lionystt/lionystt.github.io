@@ -172,9 +172,6 @@ j.addEventListener("click", ()=>{
   }
 
   
-   // alert(Text2)
-   //return Text;
-
   FactorialCalculations(Text){
    // let Text2 = "";
     let tex= "1234567890";
