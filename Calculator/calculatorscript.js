@@ -164,7 +164,7 @@ j.addEventListener("click", ()=>{
       //Search(Text)
   
    // alert(Text2)
-   this.Search(Text, tex)[0];
+  // this.Search(Text, tex)[0];
   }
   }
    // alert(Text2)
