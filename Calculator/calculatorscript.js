@@ -116,11 +116,11 @@ j.addEventListener("click", ()=>{
     parentElem.appendChild(btn);
   }
   Factorial(x){
-    let a = 1;
+    let fact = 1;
     for(let k=1; k<=x; k++){
-      a*= k;
+      fact*= k;
     }
-    return a;
+    return fact;
   }
   Match(b, text, index){
     let a ="";
@@ -129,14 +129,12 @@ j.addEventListener("click", ()=>{
       if(j== text[index]){
         a+=text[index];
         result= true;
-    // alert(text[index]);
-        this.Match(b, text, index-1);
         a+= this.Match(b, text, index-1)[0];
       }
     }
     return [a, index, text[index], result];
    }
-    Search(Text, tex){
+    Search(Text, text){
       let result2= false;
   for(let i in Text){
    // let c="";
@@ -145,37 +143,27 @@ j.addEventListener("click", ()=>{
      alert(i);
     // alert(Match(tex, Text, i-1)) 
       result2 = true;
-     c+= this.Match(tex, Text, i-1)[0];
+     c+= this.Match(text, Text, i-1)[0];
     
     if(c!=""){
    //alert(c);
       let d ="";
       for(let j=(c.length -1);j>=0;j--){
         d+=c[j];
-      // Text = Text.replace(`${d}!`, `${Factorial(d)}`);
+      // Text = Text.replace(`${d}!`, `${Factorial(d)}
       }
-      //alert(d);
-    Text = Text.replaceAll(`${d}!`, `${this.Factorial(d)}`);
-      //alert(Factorial(d));
-    //alert(Text2);
-    //  Search(Text)
-     // c="";
+    Text = Text.replaceAll(`${d}!`, `this.Factorial(${d})`);
+    Text = Text.replaceAll(Text, this.Search(Text, text));
     }
-      //Search(Text)
-  
-   // alert(Text2)
-  // this.Search(Text, tex)[0];
   }
   }
-   // alert(Text2)
-    return [Text, result2];
+    return Text;
   }
-
   
   FactorialCalculations(Text){
-   // let Text2 = "";
     let tex= "1234567890";
-    return this.Search(Text, tex);
+    let z = this.Search(Text, tex);
+    return z;
 
   
   }
@@ -198,11 +186,11 @@ j.addEventListener("click", ()=>{
      // alert(a);
     // alert(eval(a));
     //  alert(screen1text);
-     // screen1text = this.FactorialCalculations(screen1text);
-    //  alert(screen1text);
+     screen1text = this.FactorialCalculations(screen1text);
+      alert(screen1text);
       let toDisplayText = eval(screen1text);
    
-   // alert(toDisplayText);
+   alert(toDisplayText);
     this.calScreen1.innerHTML = toDisplayText;
     this.calScreen2.innerHTML = " ";
       
@@ -254,8 +242,6 @@ j.addEventListener("click", ()=>{
 }
 let cal = new Calculator();
 cal.MainWork2()
-  //alert(cal.Match("1234567890", "50!+50!+40!+30", 9))
-  alert(cal.FactorialCalculations("50!+50!+40!+30!"));
 } catch (error) {
   alert(error);
 }
