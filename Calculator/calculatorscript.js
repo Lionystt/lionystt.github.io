@@ -137,20 +137,15 @@ j.addEventListener("click", ()=>{
     Search(Text, text){
       let result2= false;
   for(let i in Text){
-   // let c="";
     if(Text[i]==="!"){
       let c="";
-     alert(i);
-    // alert(Match(tex, Text, i-1)) 
       result2 = true;
      c+= this.Match(text, Text, i-1)[0];
     
     if(c!=""){
-   //alert(c);
       let d ="";
       for(let j=(c.length -1);j>=0;j--){
         d+=c[j];
-      // Text = Text.replace(`${d}!`, `${Factorial(d)}
       }
     Text = Text.replaceAll(`${d}!`, `this.Factorial(${d})`);
     Text = Text.replaceAll(Text, this.Search(Text, text));
@@ -182,15 +177,8 @@ j.addEventListener("click", ()=>{
       screen1text = screen1text.replaceAll(s, this.classCollections.workingText[s]);
       
     }
-      
-     // alert(a);
-    // alert(eval(a));
-    //  alert(screen1text);
-     screen1text = this.FactorialCalculations(screen1text);
-      alert(screen1text);
-      let toDisplayText = eval(screen1text);
-   
-   alert(toDisplayText);
+    screen1text = this.FactorialCalculations(screen1text);
+    let toDisplayText = eval(screen1text);
     this.calScreen1.innerHTML = toDisplayText;
     this.calScreen2.innerHTML = " ";
       
@@ -204,8 +192,6 @@ j.addEventListener("click", ()=>{
   MainWork2(){
     try{
     document.body.onclick = (e)=>{
-     // alert(e.x, e.y);
-      //alert(this.FactorialCalculations());
       if(this.calScreen1.innerHTML === ""){
         this.calScreen1.innerHTML = "";
         this.calScreen2.innerHTML = "";
@@ -218,10 +204,7 @@ j.addEventListener("click", ()=>{
       
     }
      
-    //  alert(screen1text);
       let toDisplayText2 = eval(screen2text);
-   
-   // alert(toDisplayText);
         
       this.calScreen2.innerHTML =  toDisplayText2;
         if(typeof toDisplayText2 !="number"){
